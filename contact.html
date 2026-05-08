@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+            font-family:Arial, sans-serif;
+            background:#0f172a;
+            color:white;
+        }
+
+        .contact-container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+            padding:60px 0;
+        }
+
+        .contact-title{
+            text-align:center;
+            margin-bottom:50px;
+        }
+
+        .contact-title h1{
+            font-size:50px;
+            color:#38bdf8;
+        }
+
+        .contact-title p{
+            color:#cbd5e1;
+            font-size:18px;
+        }
+
+        .contact-content{
+            display:flex;
+            justify-content:space-between;
+            gap:40px;
+            flex-wrap:wrap;
+        }
+
+        .contact-info{
+            flex:1;
+            min-width:300px;
+        }
+
+        .contact-info h2{
+            margin-bottom:20px;
+            color:#38bdf8;
+        }
+
+        .info-box{
+            background:#1e293b;
+            padding:20px;
+            margin-bottom:20px;
+            border-radius:15px;
+            transition:0.3s;
+        }
+
+        .info-box:hover{
+            transform:translateY(-5px);
+        }
+
+        .info-box h3{
+            margin-bottom:10px;
+            color:#38bdf8;
+        }
+
+        .info-box p{
+            color:#e2e8f0;
+        }
+
+        .social-links{
+            margin-top:20px;
+        }
+
+        .social-links a{
+            display:inline-block;
+            margin-right:15px;
+            text-decoration:none;
+            font-size:28px;
+            transition:0.3s;
+        }
+
+        .social-links a:hover{
+            transform:scale(1.2);
+        }
+
+        .contact-form{
+            flex:1;
+            min-width:300px;
+            background:#1e293b;
+            padding:35px;
+            border-radius:20px;
+        }
+
+        .contact-form h2{
+            margin-bottom:25px;
+            color:#38bdf8;
+        }
+
+        .contact-form input,
+        .contact-form textarea{
+            width:100%;
+            padding:15px;
+            margin-bottom:20px;
+            border:none;
+            border-radius:10px;
+            outline:none;
+            font-size:16px;
+        }
+
+        .contact-form textarea{
+            height:150px;
+            resize:none;
+        }
+
+        .contact-form button{
+            width:100%;
+            padding:15px;
+            border:none;
+            border-radius:10px;
+            background:#38bdf8;
+            color:white;
+            font-size:18px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .contact-form button:hover{
+            background:#0284c7;
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            background:#111827;
+            margin-top:50px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="contact-container">
+
+    <div class="contact-title">
+        <h1>Contact Me</h1>
+        <p>Feel free to contact me for projects, collaborations, or opportunities.</p>
+    </div>
+
+    <div class="contact-content">
+
+        <div class="contact-info">
+
+            <h2>Get In Touch</h2>
+
+            <div class="info-box">
+                <h3>📧 Email</h3>
+                <p>shrirakshashriraksha3@gmail.com</p>
+            </div>
+
+            <div class="info-box">
+                <h3>📱 Phone</h3>
+                <p>+91 8310424187</p>
+            </div>
+
+            <div class="info-box">
+                <h3>📍 Location</h3>
+                <p>Karnataka, India</p>
+            </div>
+
+            <div class="social-links">
+                <a href="#">🌐</a>
+                <a href="#">💼</a>
+                <a href="#">📷</a>
+                <a href="#">📧</a>
+            </div>
+
+        </div>
+
+        <div class="contact-form">
+
+            <h2>Send Message</h2>
+
+            <form id="contactForm">
+
+                <input type="text" placeholder="Enter Your Name" required>
+
+                <input type="email" placeholder="Enter Your Email" required>
+
+                <input type="text" placeholder="Subject" required>
+
+                <textarea placeholder="Write Your Message"></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+            <p id="successMessage"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 My Portfolio | Designed by Shriraksha</p>
+</footer>
+
+<script>
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    document.getElementById("successMessage").innerHTML =
+    "✅ Message Sent Successfully!";
+
+    form.reset();
+
+});
+
+</script>
+
+</body>
+</html>
